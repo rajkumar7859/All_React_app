@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 2
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 3
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 4
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 5
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 6
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 7
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 8
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 9
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 10
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 11
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 12
+    },
+    {
+      "title": "Rajkumar",
+      "author": "typicode",
+      "id": 13
+    }
+  ]
+}

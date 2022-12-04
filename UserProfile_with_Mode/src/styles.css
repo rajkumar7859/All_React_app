@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  width: 60%;
+  margin: auto;
+}
+.light {
+  color: rgb(26, 26, 26);
+  background-color: white;
+  border: 1px solid black;
+}
+.dark {
+  color: white;
+  background-color: rgb(26, 26, 26);
+  border: 1px solid orangered;
+}
