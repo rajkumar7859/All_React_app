@@ -1,0 +1,49 @@
+.App {
+    text-align: center;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar{
+    display: flex;
+    gap: 76%;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(181, 233, 253);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding-top: 1rem;
+    padding-left: 2rem
+  }
+  .navbar div a{
+    text-decoration: none;
+    color: black;
+  }
+  .activeLink{
+    display: flex;
+    gap: 15%;
+  }
+  .catalog-items-container{
+    border: 1px red solid;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+.catalogContainer{
+
+}
+.search-container{
+  padding: 1rem;
+}
+.search-container input{
+  padding: 7px;
+  width: 25%;
+  outline: none;
+  border-radius: 10px;
+}
+.search-container input:focus{
+  border: 1px solid aqua;
+  outline-color: aqua;
+}
