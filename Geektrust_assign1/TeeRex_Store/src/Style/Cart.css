@@ -2,6 +2,8 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 10px;
   }
   
   th {
@@ -50,6 +52,8 @@ table {
     padding: 5px 10px;
     margin: 0 5px;
     border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
 
   }
   
@@ -65,6 +69,8 @@ table {
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+   border-radius: 10px;
   }
   
   .total p {
@@ -72,7 +78,7 @@ table {
     font-weight: bold;
   }
   
-  .total button {
+  .PlacedBtn {
     background-color: #3498db;
     border: none;
     color: #fff;
@@ -80,11 +86,89 @@ table {
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
   
-  .total button:hover {
+  .PlacedBtn:hover {
     background-color: #fff;
     color: #3498db;
     border: 1px solid #3498db;
+  }
+
+  .productImg{
+    width: 10%;
+  }
+  .ProductInfo{
+    font-size: 18px;
+    font-weight: 700;
+}
+  
+  /* Media query for screens smaller than 768px */
+@media (max-width: 500px) {
+    table th, table td {
+        padding: 0.3rem;
+      }
+      
+      table th {
+        font-size: 0.8rem;
+      }
+      
+      .total {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .total p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      .PlacedBtn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+      .productImg{
+        width: 100%;
+      }
+.ProductInfo{
+    font-size: 10px;
+    font-weight: 700;
+}
+    
+  }
+  
+  /* Media query for screens between 768px and 991px */
+  @media (min-width: 501px) and (max-width: 990px) {
+    table th, table td {
+        padding: 0.3rem;
+      }
+      
+      table th {
+        font-size: 0.8rem;
+      }
+      
+      .total {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .total p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      .PlacedBtn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+      .productImg{
+        width: 70%;
+      }
+      .ProductInfo{
+        font-size: 13px;
+        font-weight: 700;
+    }
   }
   

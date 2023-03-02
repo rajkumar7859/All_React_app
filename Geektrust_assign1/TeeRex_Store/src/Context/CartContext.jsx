@@ -1,13 +1,19 @@
 import React, { createContext, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const navigate =useNavigate()
 
   const addToCart = (item) => {
     try {
       const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+      if (existingItem && existingItem.quantity >= item.quantity) {
+        alert("There is not enough stock for this product.");
+        return;
+      }
   
       if (existingItem) {
         setCartItems(
@@ -17,31 +23,28 @@ const CartProvider = ({ children }) => {
               : cartItem
           )
         );
+        alert("Product added Successfully again")
       } else {
         setCartItems([...cartItems, { ...item, quantity: 1 }]);
         alert("Product added Successfully")
       }
-      
+        
     } catch (err) {
       console.log("Add to cart Error",err.message);
     }
   };
 
-  const removeFromCart = (itemId) => {
-    setCartItems(cartItems.filter((cartItem) => cartItem.id !== itemId));
-    alert("Product Remove From Cart")
+  const increaseQuantity = (item) => {
+    // const existing = cartItems.find((items) => items.id === item.id);
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === item.id 
+            ? { ...cartItem, quantity: cartItem.quantity + 1 } 
+            : cartItem
+        )
+      );
   };
-
-  const increaseQuantity = (itemId) => {
-    setCartItems(
-      cartItems.map((cartItem) =>
-        cartItem.id === itemId
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
-          : cartItem
-      )
-    );
-  };
-
+  
   const decreaseQuantity = (itemId) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === itemId);
 
@@ -58,6 +61,12 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  
+  const removeFromCart = (itemId) => {
+    setCartItems(cartItems.filter((cartItem) => cartItem.id !== itemId));
+    alert("Product Remove From Cart")
+  };
+
   const getTotalAmount = () => {
     return cartItems.reduce(
       (total, cartItem) => total + cartItem.price * cartItem.quantity,
@@ -69,6 +78,12 @@ const CartProvider = ({ children }) => {
     return cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
   };
 
+  const placeOrder=()=>{
+    alert("Order Placed Successfully")
+    setCartItems([])
+    navigate("/")
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -79,6 +94,7 @@ const CartProvider = ({ children }) => {
         decreaseQuantity,
         getTotalAmount,
         getCartItemQuantity,
+        placeOrder,
       }}
     >
       {children}
