@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
 
 const Catalogs = () => {
   const [items, setItems] = useState([]);
@@ -8,8 +10,8 @@ const Catalogs = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const [typeFilter, setTypeFilter] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+   const { addToCart } = useContext(CartContext)
 
   useEffect(() => {
     setIsLoading(true);
@@ -19,13 +21,11 @@ const Catalogs = () => {
       .then((response) => response.json())
       .then((data) => {
         setItems(data);
-        // console.log(data.data);
         setFilteredItems(data);
         setIsLoading(false);
       })
       .catch((err) => {
         setIsLoading(true);
-        console.log(err.message);
         alert(`Api error ${err.message}`);
       });
   }, []);
@@ -74,9 +74,8 @@ const Catalogs = () => {
       }
       return isMatching;
     });
-    setFilteredItems(filteredData);
+     setFilteredItems(filteredData);
   }, [genderFilter, colorFilter, typeFilter, priceFilter]);
-  
 
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
@@ -96,43 +95,6 @@ const Catalogs = () => {
     setPriceFilter("");
     setFilteredItems(items);
   };
-
-  const addToCart = (item) => {
-    const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
-    if (index >= 0) {
-      const newCartItems = [...cartItems];
-      newCartItems[index].quantity += 1;
-      setCartItems(newCartItems);
-    } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
-  };
-
-  // const removeCartItem = (itemId) => {
-  //   const newCartItems = cartItems.filter((item) => item.id !== itemId);
-  //   setCartItems(newCartItems);
-  // };
-
-  // const incrementCartItem = (itemId) => {
-  //   const index = cartItems.findIndex((cartItem) => cartItem.id === itemId);
-  //   const newCartItems = [...cartItems];
-  //   newCartItems[index].quantity += 1;
-  //   setCartItems(newCartItems);
-  // };
-
-  // const decrementCartItem = (itemId) => {
-  //   const index = cartItems.findIndex((cartItem) => cartItem.id === itemId);
-  //   const newCartItems = [...cartItems];
-  //   if (newCartItems[index].quantity > 1) {
-  //     newCartItems[index].quantity -= 1;
-  //     setCartItems(newCartItems);
-  //   }
-  // };
-
-  const totalAmount = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
 
   return (
     <div style={{ padding: "1rem" }}>

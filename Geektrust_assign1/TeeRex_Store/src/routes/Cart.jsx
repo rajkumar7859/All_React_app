@@ -1,36 +1,51 @@
-import React from 'react'
+// Cart.js
 
-const Cart = ({decrementCartItem ,incrementCartItem ,removeCartItem , cartItems , totalAmount}) => {
+import React, { useContext } from 'react';
+import { CartContext } from '../Context/CartContext';
+
+const Cart = () => {
+  const { cartItems, increaseQuantity, decreaseQuantity, removeItem } = useContext(CartContext);
+
+  const handleIncreaseQuantity = (id) => {
+    increaseQuantity(id);
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    decreaseQuantity(id);
+  };
+
+  const handleRemoveItem = (id) => {
+    removeItem(id);
+  };
+  const totalAmount = cartItems.reduce((acc, item) => {
+    return acc + (item.price * item.quantity);
+  }, 0);
+
+  console.log("sdsda",cartItems);
+
   return (
-    <div>
-      <h1>Cart</h1>
-
-      <div className="cart-container">
-  <div className="cart-items-container">
-    {cartItems.map((item) => (
-      <div className="cart-item" key={item.id}>
-        <img src={item.image} alt={item.name} />
-        <div className="cart-item-details">
-          <h3>{item.name}</h3>
-          <p>Price: ${item.price}</p>
-          <div className="cart-item-quantity">
-            <button onClick={() => decrementCartItem(item.id)}>-</button>
-            <span>{item.quantity}</span>
-            <button onClick={() => incrementCartItem(item.id)}>+</button>
-          </div>
-          <button onClick={() => removeCartItem(item.id)}>Remove</button>
-        </div>
+    <>
+    <h2>Shopping Cart</h2>
+   {
+    cartItems.length==0?(<p>Your cart is empty.</p>):
+    (
+      cartItems.map((item) => (
+        <div key={item.id}>
+        <img style={{width:"10%"}} src={item.imageURL} alt={item.name} />
+        <p>{item.name}</p>
+        <p>{item.price}</p>
+        <p>Quantity: {item.quantity}</p>
+        <button onClick={() => handleIncreaseQuantity(item.id)}>+</button>
+        <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>
+        <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
       </div>
-    ))}
-  </div>
-  <div className="cart-total-container">
-    <p>Total: ${totalAmount}</p>
-    <button>Checkout</button>
-  </div>
+      ))
+    )
+}
+<div>
+  
 </div>
-
-    </div>
+</>
   )
 }
-
-export default Cart
+export default Cart;
