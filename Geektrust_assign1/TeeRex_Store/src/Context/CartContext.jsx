@@ -6,23 +6,30 @@ const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
-    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-
-    if (existingItem) {
-      setCartItems(
-        cartItems.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    try {
+      const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+  
+      if (existingItem) {
+        setCartItems(
+          cartItems.map((cartItem) =>
+            cartItem.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + 1 }
+              : cartItem
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...item, quantity: 1 }]);
+        alert("Product added Successfully")
+      }
+      
+    } catch (err) {
+      console.log("Add to cart Error",err.message);
     }
   };
 
   const removeFromCart = (itemId) => {
     setCartItems(cartItems.filter((cartItem) => cartItem.id !== itemId));
+    alert("Product Remove From Cart")
   };
 
   const increaseQuantity = (itemId) => {

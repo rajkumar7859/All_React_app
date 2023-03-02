@@ -1,0 +1,90 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 12px;
+  }
+  
+  td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  td button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+  
+  td button:hover {
+    background-color: #ddd;
+  }
+  
+  td span {
+    margin: 0 5px;
+  }
+  
+  .removeBtn {
+    background-color: #fff;
+    border: 1px solid #3498db;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 7px;
+
+  }
+  
+  .removeBtn:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .total p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .total button {
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 7px;
+  }
+  
+  .total button:hover {
+    background-color: #fff;
+    color: #3498db;
+    border: 1px solid #3498db;
+  }
+  

@@ -94,10 +94,11 @@ const Catalogs = () => {
     setColorFilter("");
     setPriceFilter("");
     setFilteredItems(items);
+    alert("All filters as been removed")
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div style={{ padding: "1rem" , paddingTop:"4rem" }}>
       <div className="search-container">
         <input type="text" placeholder="Search" onChange={handleSearch} />
       </div>
@@ -136,6 +137,7 @@ const Catalogs = () => {
               <span>Green</span>
             </div>
           </div>
+          <hr />
           <div className="filter-items">
             <h3>Gender</h3>
             <div className="input_P">
@@ -159,6 +161,7 @@ const Catalogs = () => {
               <p>Women</p>
             </div>
           </div>
+          <hr/>
           <div className="filter-items">
             <h3>Price</h3>
             <div className="input_P">
@@ -192,6 +195,7 @@ const Catalogs = () => {
               <span>over-450</span>
             </div>
           </div>
+          <hr/>
           <div className="filter-items">
             <h3>Type</h3>
             <div className="input_P">
@@ -207,6 +211,7 @@ const Catalogs = () => {
               <span>Basic</span>
             </div>
           </div>
+          <hr/>
           <button className="addToCartBtn" onClick={handleClearFilter}>
             Clear All filter
           </button>
@@ -228,6 +233,7 @@ const Catalogs = () => {
                   src={item.imageURL}
                   alt={item.name}
                 />
+                <hr/>
                 <h3>{item.name}</h3>
                 <p>Rs {item.price}</p>
                 <p>{item.gender}</p>
