@@ -9,7 +9,6 @@ const Catalogs = () => {
   const [priceFilter, setPriceFilter] = useState("");
   const [filteredItems, setFilteredItems] = useState([]);
   const [typeFilter, setTypeFilter] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
    const { addToCart } = useContext(CartContext)
 
@@ -94,6 +93,7 @@ const Catalogs = () => {
     setColorFilter("");
     setPriceFilter("");
     setFilteredItems(items);
+    setTypeFilter("")
     alert("All filters as been removed")
   };
 

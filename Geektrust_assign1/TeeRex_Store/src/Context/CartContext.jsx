@@ -35,7 +35,6 @@ const CartProvider = ({ children }) => {
   };
 
   const increaseQuantity = (item) => {
-    // const existing = cartItems.find((items) => items.id === item.id);
       setCartItems(
         cartItems.map((cartItem) =>
           cartItem.id === item.id 
