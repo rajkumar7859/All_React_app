@@ -32,6 +32,7 @@ const UserTable = () => {
   const [selectedRows, setSelectedRows] = useState([]);
   const [editUser, setEditUser] = useState(null);
   const [editName, setEditName] = useState("");
+  const [editRole, setEditRole] = useState("");
   const [editEmail, setEditEmail] = useState("");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -74,6 +75,7 @@ const UserTable = () => {
     setEditUser(null);
     setEditName("");
     setEditEmail("");
+    setEditRole("")
   }
 
   // Handle select all checkbox
@@ -84,7 +86,7 @@ const UserTable = () => {
     setEditUser(null);
     setEditName("");
     setEditEmail("");
-    alert("Selected User was deleted successful")
+    setEditRole("")
   }
 
   // Handle row deletion
@@ -94,6 +96,7 @@ const UserTable = () => {
     setEditUser(null);
     setEditName("");
     setEditEmail("");
+    setEditRole("")
     alert("Selected User was deleted successful")
   }
   const handleDeleteSelectedRows = () => {
@@ -109,17 +112,21 @@ const UserTable = () => {
     setEditUser(id);
     setEditName(userToEdit.name);
     setEditEmail(userToEdit.email);
+    setEditRole(userToEdit.role)
     onOpen();
   }
 
   // Handle name input change
-  function handleNameChange(event) {
+  const handleNameChange=(event) =>{
     setEditName(event.target.value);
   }
 
   // Handle email input change
-  function handleEmailChange(event) {
+  const handleEmailChange=(event)=> {
     setEditEmail(event.target.value);
+  }
+  const handleRoleChange=(event) =>{
+    setEditRole(event.target.value);
   }
 
   // Handle save Button click
@@ -131,6 +138,7 @@ const UserTable = () => {
             ...user,
             name: editName,
             email: editEmail,
+            role: editRole,
           };
         } else {
           return user;
@@ -140,6 +148,7 @@ const UserTable = () => {
     setEditUser(null);
     setEditName("");
     setEditEmail("");
+    setEditRole("")
     onClose();
   }
 
@@ -148,6 +157,7 @@ const UserTable = () => {
     setEditUser(null);
     setEditName("");
     setEditEmail("");
+    setEditRole("")
     onClose();
   }
 
@@ -167,7 +177,7 @@ const UserTable = () => {
   return (
     <>
       <FormControl m="auto" mt="4" mb="1rem" w="50%" >
-        <Input type="text" placeholder="Search by Name or Email" onChange={handleSearchQueryChange} />
+        <Input type="text" placeholder="Search by Name, Email or Role" onChange={handleSearchQueryChange} />
       </FormControl>
       <Table variant="simple" w="90%" m="auto" border="1px solid gray">
         <Thead>
@@ -184,6 +194,7 @@ const UserTable = () => {
             </Th>
             <Th fontSize="1rem">Name</Th>
             <Th fontSize="1rem">Email</Th>
+            <Th fontSize="1rem">Role</Th>
             <Th fontSize="1rem">Action</Th>
           </Tr>
         </Thead>
@@ -199,6 +210,7 @@ const UserTable = () => {
               </Th>
               <Th>{user.name}</Th>
               <Th>{user.email}</Th>
+              <Th>{user.role}</Th>
               <Th>
                 <IconButton
                   aria-label="Edit user"
@@ -222,7 +234,7 @@ const UserTable = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{editUser ? "Edit User" : "Add User"}</ModalHeader>
+          <ModalHeader>{"Edit User"}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <FormControl>
@@ -235,6 +247,14 @@ const UserTable = () => {
                 type="email"
                 value={editEmail}
                 onChange={handleEmailChange}
+              />
+            </FormControl>
+            <FormControl mt="4">
+              <FormLabel>Role:</FormLabel>
+              <Input
+                type="role"
+                value={editRole}
+                onChange={handleRoleChange}
               />
             </FormControl>
           </ModalBody>
