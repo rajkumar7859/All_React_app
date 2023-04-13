@@ -12,6 +12,7 @@ The T-shirt store web application has the following screens:
 The catalog screen is the main screen of the application. It displays a list of T-shirts, each represented by a card. The card contains the T-shirt's image, name, and price. The cards are arranged in a grid layout to maximize screen real estate. The catalog screen has a search bar and a filter button in the top navigation bar.
 
 ## Technologies Used
+
 The T-shirt store web application was built using HTML, CSS, JavaScript and React.js, no third party libraries. The application is responsive and can be viewed on desktop and mobile devices.
 
 ### Implementation Details
