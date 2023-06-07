@@ -10,7 +10,7 @@ export const TypingBox = () => {
   const [total, setTotal] = useState(0);
   const [result, setResult] = useState("");
   const [start, setStart] = useState(false);
-  const [time, setTime] = useState(null);
+  const [time, setTime] = useState(300);
   const [highScore, setHighScore] = useState(0);
   const [keyCount, setKeyCount] = useState(0);
 
