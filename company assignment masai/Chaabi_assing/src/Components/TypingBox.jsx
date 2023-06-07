@@ -1,9 +1,8 @@
-import "./styles.css";
 import randomWords from "random-words";
 import { useState, useEffect } from "react";
 
-export default function App() {
-  const [words, setWords] = useState(randomWords(50));
+export const TypingBox = () => {
+  const [words, setWords] = useState(randomWords(8));
   const [acc, setAcc] = useState(new Array(50).fill(0));
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -85,7 +84,7 @@ export default function App() {
 
   function generateNewWords() {
     const newWords = randomWords(8); // change the words in one time
-    setWords([...words, ...newWords]); // adding new word until the timer end
+    setWords([...words, ...newWords]); // adding new word ubtil the timer end
   }
 
   function reset() {
@@ -147,7 +146,7 @@ export default function App() {
         ))}
       </div>
       <input
-        disabled={time <= 0}
+        disabled={time === 0}
         value={text}
         onChange={(ev) => checkText(ev)}
         className="input"
@@ -156,4 +155,4 @@ export default function App() {
       <h3 className="key-count">Key Count: {keyCount}</h3>
     </div>
   );
-}
+};
