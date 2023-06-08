@@ -13,6 +13,7 @@ export const TypingBox = () => {
   const [time, setTime] = useState(300);
   const [highScore, setHighScore] = useState(0);
   const [keyCount, setKeyCount] = useState(0);
+  const [incorrect, setIncorrect] = useState(false);
 
   const practiceDuration = 300; // 5 minutes in seconds
 
@@ -67,8 +68,10 @@ export const TypingBox = () => {
       if (typedWord === currentWord) {
         setCorrect(correct + 1);
         temp[index] = 1;
+        setIncorrect(false);
       } else {
         temp[index] = -1;
+        setIncorrect(true);
       }
       setAcc(temp);
 
@@ -99,6 +102,7 @@ export const TypingBox = () => {
     setTime(practiceDuration);
     setAcc(new Array(50).fill(0));
     setKeyCount(0);
+    setIncorrect(false);
   }
 
   function chooseColor(i) {
@@ -120,6 +124,8 @@ export const TypingBox = () => {
     <div className="App">
       <div className="box">
         <h1>Typing Test</h1>
+
+        {incorrect && <h3 className="feedback">Incorrect word ❗</h3>}
         <div className="textMain">
           <h2 className="text">High Score: {highScore} WPM</h2>
           <h2 className="text">Correct: {correct} </h2>
@@ -138,20 +144,24 @@ export const TypingBox = () => {
           Reset
         </button>
       </div>
-      <div className="text-box">
-        {words.map((v, i) => (
-          <div className="word" style={{ color: chooseColor(i) }}>
-            {v}
-          </div>
-        ))}
+
+      <div className="word_input_con">
+        <div className="text-box">
+          {words.map((v, i) => (
+            <div key={i} className="word" style={{ color: chooseColor(i) }}>
+              {v}
+            </div>
+          ))}
+        </div>
+        <input
+          disabled={time === 0}
+          value={text}
+          onChange={(ev) => checkText(ev)}
+          className={incorrect ? "incorrect" : ""}
+          placeholder="Start your practice"
+        />
       </div>
-      <input
-        disabled={time === 0}
-        value={text}
-        onChange={(ev) => checkText(ev)}
-        className="input"
-        placeholder="Start your practice"
-      />
+
       <h3 className="key-count">Key Count: {keyCount}</h3>
     </div>
   );

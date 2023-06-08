@@ -26,7 +26,7 @@ body {
   padding: 10px;
 }
 
-.input {
+.App input {
   height: 50px;
   width: 100%;
   font-size: 25px;
@@ -76,16 +76,17 @@ body {
 
 .box {
   background-color: midnightblue;
-  width: 100%;
+  width: 60%;
   color: white;
   text-align: center;
   margin: 10px;
+  padding: 15px;
   border-radius: 10px;
 }
 .textMain {
-  justify-content: space-evenly;
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 .key-count {
   font-family: monaco, monospace;
@@ -94,16 +95,26 @@ body {
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
+  background-color: white;
 }
-
+.feedback {
+  color: red;
+}
+.incorrect {
+  border-color: red;
+  outline-color: red;
+}
+.word_input_con {
+  width: 60%;
+}
 /* small screen */
-@media all and (min-width: 50px) and (max-width: 500px) {
+@media all and (min-width: 10px) and (max-width: 600px) {
   .textMain {
     display: block;
   }
 }
 /* meddle screen */
-@media all and (min-width: 501px) and (max-width: 900px) {
+@media all and (min-width: 601px) and (max-width: 1100px) {
   .textMain {
     display: grid;
     grid-template-columns: 1fr 1fr;
