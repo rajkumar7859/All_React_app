@@ -15,7 +15,7 @@ export const TypingBox = () => {
   const [keyCount, setKeyCount] = useState(0);
   const [incorrect, setIncorrect] = useState(false);
 
-  const practiceDuration = 150; // 5 minutes in seconds
+  const practiceDuration = 150; // "2 minutes 30 seconds" in seconds
 
   useEffect(() => {
     let timerId;
