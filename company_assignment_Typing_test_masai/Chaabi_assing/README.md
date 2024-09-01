@@ -1,11 +1,11 @@
 # Typing Test Website
 
-Welcome to the Typing Test website! This application allows users to test and improve their typing speed and accuracy. The test has various features to provide a comprehensive typing experience, including live tracking of typing accuracy, words per minute (WPM), key count, and more.
+Welcome to the Typing Test website! This application allows users to test and improve their typing speed and accuracy. The test is designed with various features to provide a comprehensive typing experience, including live tracking of typing accuracy, words per minute (WPM), key count, and more.
 
 ## Features
 
 ### 1. **Typing Accuracy**
-   - The application calculates and displays your typing accuracy in real time as you type. This helps you understand how many characters you have typed correctly versus the total number of characters.
+   - The application calculates and displays your typing accuracy in real-time as you type. This helps you understand how many characters you have typed correctly versus the total number of characters.
 
 ### 2. **Words Per Minute (WPM)**
    - The website tracks and displays your typing speed in words per minute (WPM). This is calculated based on the number of words you type correctly within the given time.
@@ -66,5 +66,5 @@ npm run build
 
 # Technologies Used
 **React.js**: A JavaScript library for building user interfaces.
-**CSS**: This is for styling the application.
-**JavaScript**: To handle the application's logic.
+**CSS**: For styling the application.
+**JavaScript**: For handling the application's logic.
