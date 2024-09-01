@@ -44,12 +44,6 @@ The website is deployed and accessible via the following link:
 
 To run the project locally, follow these steps:
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-
-
-
 # The website is deployed and accessible via the following link:
 [Typing Test Website](https://chaabiassigntypingtestreact-65gwnj74p-rajkumar7859s-projects.vercel.app/)
 
@@ -59,18 +53,18 @@ To run the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/rajkumar7859/All_React_app/tree/3cdd710bb0cb9c5802238da7b3f489be691c6451/company_assignment_Typing_test_masai/Chaabi_assing)
 
-## Install dependencies:
+# Install dependencies:
 npm install
 
-## Run the application:
+# Run the application:
 npm start
 
-## Build the application:
+# Build the application:
 npm run build
 
-## Technologies Used
+# Technologies Used
 **React.js**: A JavaScript library for building user interfaces.
 **CSS**: For styling the application.
 **JavaScript**: For handling the application's logic.
