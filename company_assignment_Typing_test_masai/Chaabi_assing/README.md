@@ -2,6 +2,11 @@
 
 Welcome to the Typing Test website! This application allows users to test and improve their typing speed and accuracy. The test is designed with various features to provide a comprehensive typing experience, including live tracking of typing accuracy, words per minute (WPM), key count, and more.
 
+## Deployment
+
+The website is deployed and accessible via the following link:
+[Typing Test Website](https://chaabiassigntypingtestreact-65gwnj74p-rajkumar7859s-projects.vercel.app/)
+
 ## Features
 
 ### 1. **Typing Accuracy**
@@ -34,11 +39,6 @@ Welcome to the Typing Test website! This application allows users to test and im
 3. **Finish the Test**: When the timer runs out, the final results will be displayed, including your WPM, accuracy, total key count, and the number of correct words typed.
 
 4. **Reset**: You can use the reset button to start a new typing test at any time.
-
-## Deployment
-
-The website is deployed and accessible via the following link:
-[Typing Test Website](https://chaabiassigntypingtestreact-65gwnj74p-rajkumar7859s-projects.vercel.app/)
 
 ## Getting Started
 
