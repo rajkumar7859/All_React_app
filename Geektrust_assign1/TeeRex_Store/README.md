@@ -1,6 +1,9 @@
 # T-shirt Store - User Interface
+
+**Live Deployment**: [Tee Rex Store](https://tee-rex-store-ewk97jgqc-rajkumar7859.vercel.app/)
+
 ### Introduction
-This document outlines the design and functionality of a T-shirt store web application. The application allows users to browse, filter, and search through a catalog of T-shirts. Users can add T-shirts to their shopping cart and view the cart's contents. They can also increase the quantity of items in the cart and delete them as needed. The design is simple, intuitive, and easy to navigate.
+This document outlines the design and functionality of a **T-shirt Store** web application . The application allows users to browse, filter, and search through a catalog of T-shirts. Users can add T-shirts to their shopping cart and view the cart's contents. They can also increase the quantity of items in the cart and delete them as needed. The design is simple, intuitive, and easy to navigate.
 
 ### User Interface Design
 The T-shirt store web application has the following screens:
@@ -9,27 +12,48 @@ The T-shirt store web application has the following screens:
 3.Filter screen
 5.Shopping cart screen
 
-The catalog screen is the main screen of the application. It displays a list of T-shirts, each represented by a card. The card contains the T-shirt's image, name, and price. The cards are arranged in a grid layout to maximize screen real estate. The catalog screen has a search bar and a filter button in the top navigation bar.
+The **Catalog Screen** is the main screen of the application. It displays a list of T-shirts, each represented by a card. The card contains the T-shirt's image, name, and price. The cards are arranged in a grid layout to maximize screen real estate. The catalog screen has a search bar and a filter button in the top navigation bar.
 
 ## Technologies Used
 
-The T-shirt store web application was built using HTML, CSS, JavaScript and React.js, no third party libraries. The application is responsive and can be viewed on desktop and mobile devices.
+- **HTML**, **CSS**, **JavaScript**, and **React.js** (without third-party libraries)
+- Fully responsive, adaptable for both desktop and mobile devices
 
-### Implementation Details
-#### Catalog Screen
-The catalog screen is implemented using an HTML grid layout to display the T-shirts in a responsive format. Each T-shirt is represented by a card that includes an image, name, and price. Clicking on a card adds the T-shirt to the shopping cart. The search bar and filter button are implemented using HTML form elements and JavaScript event listeners.
+## 🚀 Features & Functionality
 
-#### Search Screen
-The search screen is implemented using an HTML form element to capture the user's search query. The search results are generated using JavaScript and displayed in the same format as the catalog screen. The back button is implemented using a JavaScript event listener.
+#### 1. 📦 Catalog Screen
+- Displays a list of T-shirts, each shown in a card with an image, name, and price.
+- Clicking on a card adds the T-shirt to the **shopping cart**.
+- Includes a **search bar** to find specific T-shirts.
+- Features a **filter button** to narrow down selections by various criteria.
 
-#### Filter Screen
-The filter screen is implemented using HTML form elements to capture the user's filter criteria. The filter results are generated using JavaScript and displayed in the same format as the catalog screen. The back button is implemented using a JavaScript event listener.
+#### 2. 🔍 Search Screen
+- Allows users to enter keywords and search through the available T-shirts.
+- Displays search results in a grid layout identical to the catalog screen.
+- Includes a **back button** to return to the main catalog.
 
-#### Shopping Cart Screen
-The shopping cart screen is implemented using HTML and JavaScript. The contents of the shopping cart are stored in a JavaScript object and displayed in a table format. The user can increase the quantity of items, delete items, and proceed to checkout. The back button is implemented using a JavaScript event listener.
+#### 3. 🎛️ Filter Screen
+- Users can filter T-shirts by:
+  - Gender
+  - Color
+  - Price Range
+  - Type (e.g., full-sleeve, half-sleeve)
+- Filtered results appear in the same layout as the catalog screen.
+- **Back button** to return to the catalog.
 
-#### Quantity Limits
-The quantity limits are implemented using JavaScript. Each T-shirt type has a maximum quantity that is stored in a JavaScript object. When a user adds a T-shirt to the shopping cart, the quantity is checked against the maximum quantity. If the quantity exceeds the maximum, an error message is displayed.
+#### 4. 🛒 Shopping Cart Screen
+- Displays all the items added to the cart.
+- Users can:
+  - View item quantities and prices
+  - Increase or decrease item quantities
+  - Remove items from the cart
+  - Proceed to **checkout**
+- **Back button** to return to the catalog.
+
+#### 5. 📏 Quantity Limits
+- Each T-shirt type has a predefined maximum quantity.
+- If a user attempts to add more than the available stock, an error message is shown.
+
 
 ## Functionality
 The T-shirt store web application has the following functionality:
