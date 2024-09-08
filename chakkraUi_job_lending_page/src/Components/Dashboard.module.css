@@ -1,0 +1,10 @@
+.FourDaytext {
+  background-image: linear-gradient(
+    to right,
+    var(--chakra-colors-purple-500),
+    var(--chakra-colors-blue-500)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+}
