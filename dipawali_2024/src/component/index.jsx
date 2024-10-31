@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../App.css';
+import creator_logo from "./Rajkumar_logo.png"
 
 const HomePage = () => {
   const [inputValue, setInputValue] = useState('');
@@ -19,8 +20,12 @@ const HomePage = () => {
 
   return (
     <div className="mainContainer" >
-      
+           
     <div className="flex flex-col items-center justify-center h-screen bg">
+    <div >
+    <img src={creator_logo} alt="creator_logo" className="w-16 " /> 
+    </div>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
         
