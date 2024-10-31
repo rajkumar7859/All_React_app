@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.mainContainer{
+  background-image: url('../public/DesignerM.jpeg');
+  background-size: cover;       
+    background-position: center;   
+  background-repeat: no-repeat;  
+}
+.dashboardBgContainer{
+  background-image: url('../public/Leonardo_Phoenix.jpg');
+  background-size: cover;       
+    background-position: center;   
+  background-repeat: no-repeat;
+}
+.neon-glow-input {
+  box-shadow: 0 0 12px rgba(0, 162, 255, 0.7), 0 0 15px rgba(0, 162, 255, 0.6);
+}
+.neon-glow-dashboard {
+  box-shadow: 0 0 12px rgba(0, 162, 255, 0.7), 0 0 15px rgba(0, 162, 255, 0.6);
+}
+
+.neon-glow-button {
+  box-shadow: 0 0 12px rgba(0, 162, 255, 0.7), 0 0 15px rgba(0, 162, 255, 0.6);
+}
+
+.neon-glow-input:focus,
+.neon-glow-button:hover {
+  box-shadow: 0 0 18px rgba(0, 185, 301, 10.7), 0 0 22px rgba(0, 175, 300, 2.6);
+}
+.neon-glow-dashboard:hover {
+  box-shadow: 0 0 18px rgba(0, 185, 301, 10.7), 0 0 22px rgba(0, 175, 300, 2.6);
+}
+.custom-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
