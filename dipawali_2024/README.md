@@ -12,6 +12,7 @@ You can view the live application at: [Happy Diwali](https://happy-dipawli-2024.
 - **Interactive Form**: Users can input their names and receive personalized Diwali greetings.
 - **Stylish UI**: The application uses Tailwind CSS for a modern and visually appealing design.
 - **Dynamic Routing**: Built with React Router to navigate between the homepage and the dashboard.
+- **Background Music**: When users are redirected to the dashboard, a festive Diwali song automatically plays, enhancing the celebratory experience.
 
 ## Technologies Used
 
