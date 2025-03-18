@@ -1,0 +1,46 @@
+.signupContainer{
+    width: 30%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    text-align: left;
+    padding: 25px;
+    line-height: 45px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .formContainer input{
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px ;
+    display: block;
+    outline-color: rgb(54, 189, 243);
+    padding: 7px;
+    border: none;
+    background-color: rgb(250, 241, 229);
+  }
+  .formContainer label{
+  font-weight: 500;
+  }
+  .formBtn{
+      background-color: rgb(54, 195, 250);
+    border-radius: 10px;
+    width: 100%;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 19px;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.formBtn:hover{
+      background-color: skyblue;
+  }
+  .footerLink{
+    line-height: 10px;
+  }
+  .taskcontainer{
+    width: 50%;
+    margin: auto;
+  }
